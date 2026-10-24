@@ -17,7 +17,7 @@ nutricional:
   carbohidratos: "<0.5"
   acucares: "<0.5"
   proteinas: "0"
-  sodio: "-6"
+  sodio: "0"
 
 en:
   tipo: "White"

@@ -20,11 +20,11 @@ nutricional:
   sodio: "0"
 
 en:
-  tipo: "Branco"
+  tipo: "White"
   descricao: "We decided to spice up the Avesso with Castelão (a red wine caste) stalks. Reverb is a foot-tread monovarietal wine with an initial three-day maceration. It then macerates in a stainless steel tank for six months, in contact with the grapes’ skin and the stalks from the Quinta’s red wine."
   ingredientes: "Grapes, contains sulphites"
 
 pt:
-  tipo: "White"
+  tipo: "Branco"
   descricao: "Resolvemos virar o avesso ao contrário e apimentá-lo com o engaço do castelão. Este é um vinho pisado no lagar, com uma primeira maceração de três dias, e depois na cuba de inox onde macerou em contacto com a película da própria uva e com o engaço do tinto produzido na quinta por seis meses."
   ingredientes: "Uvas, contém sulfitos"
