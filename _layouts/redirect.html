@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RPM</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ site.url }}{{ page.para }}">
+<meta http-equiv="refresh" content="0; url={{ page.para | relative_url }}">
+<script>location.replace({{ page.para | relative_url | jsonify }});</script>
+</head>
+<body>
+<p><a href="{{ page.para | relative_url }}">{{ site.url }}{{ page.para }}</a></p>
+</body>
+</html>

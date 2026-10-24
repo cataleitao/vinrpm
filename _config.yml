@@ -1,0 +1,21 @@
+title: RPM
+description: Vinhos Naturais entre Douro e Vinho Verde
+url: "https://vinrpm.com"
+
+# ENDEREÇO BASE
+# Enquanto o site estiver a ser testado em https://cataleitao.github.io/vinrpm/ fica "/vinrpm".
+# No dia em que o domínio vinrpm.com passar a apontar para o GitHub, muda-se para "" (vazio).
+baseurl: "/vinrpm"
+
+lang_default: en
+theme: null
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - ferramentas
+  - Gemfile
+  - Gemfile.lock
+  - vendor

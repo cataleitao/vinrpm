@@ -1,0 +1,79 @@
+---
+layout: base
+body_class: wp-singular detail-template-default single single-detail wp-embed-responsive wp-theme-astra wp-child-theme-astra-child ast-desktop ast-separate-container ast-two-container ast-no-sidebar astra-4.13.3 ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled
+css_astra: /assets/css/astra-vinho.css
+---
+{%- assign v = site.data.vinhos[page.vinho] -%}
+{%- assign t = site.data.textos[page.lang] -%}
+{%- assign l = v[page.lang] -%}
+{%- assign n = v.nutricional -%}
+<main class="rpm-detail-main">
+
+    <!-- Botão voltar -->
+    <div class="rpm-detail-back">
+        <a href="{{ t.inicio | relative_url }}#vinhos" class="rpm-detail-back__link">
+            {{ t.voltar }}
+        </a>
+    </div>
+
+    <div class="rpm-detail-card" style="background-color: {{ v.cor }};">
+
+        <!-- Foto -->
+        <div class="rpm-detail-card__foto">
+            {%- if v.foto and v.foto != "" %}
+            <img src="{{ v.foto | relative_url }}"
+                 alt="{{ v.foto_alt | escape }}"
+                 class="rpm-detail-card__img">
+            {%- endif %}
+        </div>
+
+        <!-- Info -->
+        <div class="rpm-detail-card__info">
+            <h1 class="rpm-detail-card__titulo">
+                {{ v.titulo | escape }}
+            </h1>
+            <p class="rpm-detail-card__subtitulo">
+                {{ l.tipo | escape }} &nbsp; {{ v.ano | escape }}
+            </p>
+            <p class="rpm-detail-card__casta">
+                {{ t.casta }}: {{ v.casta | escape }}
+            </p>
+            <p class="rpm-detail-card__descricao">
+                {{ l.descricao }}
+            </p>
+
+            <!-- Tabela nutricional colapsável -->
+            <div class="rpm-detail-nutri">
+                {%- if v.ficha_tecnica and v.ficha_tecnica != "" %}
+                <p class="rpm-detail-ficha">
+                    <a href="{{ v.ficha_tecnica | relative_url }}" target="_blank" rel="noopener">
+                        {{ t.ficha }}
+                    </a>
+                </p>
+                {%- endif %}
+                <button class="rpm-detail-nutri__btn"
+                        onclick="var p=this.nextElementSibling; p.style.display=p.style.display==='none'?'block':'none'; this.querySelector('.rpm-toggle').textContent=this.querySelector('.rpm-toggle').textContent==='+'?'−':'+';">
+                    <span class="rpm-toggle">+</span>
+                    <span>{{ t.nutricional }}</span>
+                </button>
+
+                <div class="rpm-detail-nutri__tabela" style="display: none;">
+                    <table>
+                        <tr><td>{{ t.energia }}</td><td>{{ n.energia | escape }} kcal</td></tr>
+                        <tr><td>{{ t.gorduras }}</td><td>{{ n.gorduras | escape }} g</td></tr>
+                        <tr><td class="rpm-sub">· {{ t.gorduras_saturadas }}</td><td>{{ n.gorduras_saturadas | escape }} g</td></tr>
+                        <tr><td>{{ t.carbohidratos }}</td><td>{{ n.carbohidratos | escape }} g</td></tr>
+                        <tr><td class="rpm-sub">· {{ t.acucares }}</td><td>{{ n.acucares | escape }} g</td></tr>
+                        <tr><td>{{ t.proteinas }}</td><td>{{ n.proteinas | escape }} g</td></tr>
+                        <tr><td>{{ t.sodio }}</td><td>{{ n.sodio | escape }} g</td></tr>
+                    </table>
+                    <p class="rpm-detail-nutri__ingredientes">
+                        <strong>{{ t.ingredientes }}</strong><br>
+                        {{ l.ingredientes | escape }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>

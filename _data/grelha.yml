@@ -1,0 +1,9 @@
+# Vinhos que aparecem na grelha "Os Nossos Vinhos" da página inicial, por esta ordem.
+# Cada nome é o nome de um ficheiro em _data/vinhos/ (sem o .yml).
+# Um vinho que saia desta lista deixa de aparecer na grelha, mas a página dele
+# continua no ar (os QR codes das garrafas continuam a funcionar).
+- analogue_2024
+- duotone-2024
+- eq-2024
+- ovdb-tinto-2024
+- ovdb-branco-2025

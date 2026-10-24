@@ -1,0 +1,60 @@
+---
+layout: base
+titulo_pagina: "RPM &#8211; Vinhos Naturais entre Douro e Vinho Verde"
+url_en: /
+url_pt: /pt/inicio/
+---
+{%- assign t = site.data.textos[page.lang] -%}
+<div class="rpm-home-wrap">
+
+    <!-- ========================================================
+         SECÇÃO: INÍCIO — introdução (texto em _includes/conteudo/introducao-{{ page.lang }}.html)
+         ======================================================== -->
+    <section id="inicio" class="rpm-section rpm-section--intro">
+{% include conteudo/introducao-{{ page.lang }}.html %}
+    </section>
+
+    <!-- ========================================================
+         SECÇÃO: OS NOSSOS VINHOS (lista e ordem em _data/grelha.yml)
+         ======================================================== -->
+    <section id="vinhos" class="rpm-section rpm-section--vinhos">
+        <div class="rpm-section-inner">
+            <h2 class="rpm-section-title">{{ t.titulo_vinhos }}</h2>
+            <div class="rpm-grid">
+            {%- for id in site.data.grelha %}
+                {%- assign v = site.data.vinhos[id] -%}
+                {%- assign pagina = site.pages | where: "vinho", id | where: "lang", page.lang | first %}
+                <div class="rpm-card" style="background-color: {{ v.cor }};">
+                    {%- if v.foto and v.foto != "" %}
+                        <img src="{{ v.foto | relative_url }}"
+                             alt="{{ v.titulo | escape }}"
+                             class="rpm-card__img">
+                    {%- endif %}
+                    <div class="rpm-card__body">
+                        <p class="rpm-card__meta">{{ v[page.lang].tipo | escape }} — {{ v.ano | escape }}</p>
+                        <h3 class="rpm-card__title">{{ v.titulo | escape }}</h3>
+                        <a href="{{ pagina.url | relative_url }}" class="rpm-card__btn">
+                            {{ t.mais_info }}
+                        </a>
+                    </div>
+                </div>
+            {%- endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         SECÇÃO: A NOSSA HISTÓRIA (texto em _includes/conteudo/historia-{{ page.lang }}.html)
+         ======================================================== -->
+    <section id="a-quinta" class="rpm-section rpm-section--quinta">
+{% include conteudo/historia-{{ page.lang }}.html %}
+    </section>
+
+    <!-- ========================================================
+         SECÇÃO: CONTACTOS (texto em _includes/conteudo/contactos-{{ page.lang }}.html)
+         ======================================================== -->
+    <section id="contactos" class="rpm-section rpm-section--contactos">
+{% include conteudo/contactos-{{ page.lang }}.html %}
+    </section>
+
+</div>

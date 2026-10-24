@@ -1,0 +1,117 @@
+{%- assign lang = page.lang | default: site.lang_default -%}
+{%- assign t = site.data.textos[lang] -%}
+{%- if page.vinho -%}
+  {%- assign irmas = site.pages | where: "vinho", page.vinho -%}
+  {%- for p in irmas -%}
+    {%- if p.lang == "en" -%}{%- assign url_en = p.url -%}{%- else -%}{%- assign url_pt = p.url -%}{%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign url_en = page.url_en | default: layout.url_en | default: site.data.textos.en.inicio -%}
+  {%- assign url_pt = page.url_pt | default: layout.url_pt | default: site.data.textos.pt.inicio -%}
+{%- endif -%}
+{%- assign inicio = t.inicio | relative_url -%}
+{%- assign body_class = page.body_class | default: layout.body_class -%}
+{%- assign css_astra = page.css_astra | default: layout.css_astra | default: "/assets/css/astra-pagina.css" -%}
+{%- if page.vinho -%}
+  {%- assign titulo_pagina = site.data.vinhos[page.vinho].titulo | escape | append: " &#8211; RPM" -%}
+{%- else -%}
+  {%- assign titulo_pagina = page.titulo_pagina | default: layout.titulo_pagina | default: "RPM" -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ t.html_lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ titulo_pagina }}</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" href="{{ site.url }}{{ url_en }}" hreflang="en" />
+<link rel="alternate" href="{{ site.url }}{{ url_pt }}" hreflang="pt" />
+<link rel='stylesheet' href='{{ "/wp-content/themes/astra/assets/css/minified/main.min.css" | relative_url }}' media='all' />
+<link rel='stylesheet' href='{{ css_astra | relative_url }}' media='all' />
+<link rel='stylesheet' href='{{ "/assets/css/wordpress.css" | relative_url }}' media='all' />
+<link rel='stylesheet' href='{{ "/wp-content/themes/astra/style.css" | relative_url }}' media='all' />
+<link rel='stylesheet' href='{{ "/wp-content/themes/astra-child/style.css" | relative_url }}' media='all' />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+</head>
+<body class="{{ body_class }}">
+			<script>
+			(function(){var w=document.documentElement.clientWidth;if(w>0&&w<=921){document.body.classList.add('ast-header-break-point');document.body.classList.remove('ast-desktop');}})();
+			</script>
+
+<header id="masthead" class="rpm-header" role="banner">
+    <div class="rpm-header__inner">
+        <div class="rpm-header__logo">
+            <a href="{{ inicio }}" class="site-title">
+                RPM
+            </a>
+        </div>
+        <div class="rpm-header__right">
+            <div id="rpm-lang-wrapper">
+                <button id="rpm-lang-btn" aria-expanded="false" aria-haspopup="true">
+                    {% if lang == "pt" %}PT{% else %}EN{% endif %} <span class="rpm-lang-arrow">▾</span>
+                </button>
+                <div id="rpm-lang-dropdown">
+                    <a href="{{ url_en | relative_url }}"
+                       class="rpm-lang-item{% if lang == 'en' %} is-current{% endif %}">
+                        EN
+                    </a>
+                    <a href="{{ url_pt | relative_url }}"
+                       class="rpm-lang-item{% if lang == 'pt' %} is-current{% endif %}">
+                        PT
+                    </a>
+                </div>
+            </div>
+            <button id="rpm-btn-menu">MENU</button>
+        </div>
+    </div>
+</header>
+
+{{ content }}
+
+<footer
+class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+			<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+	<div class="ast-builder-grid-row-container-inner">
+					<div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+											<div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+								<div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
+				<div class="ast-footer-copyright"><p>Copyright &copy; {{ site.time | date: "%Y" }} RPM</p>
+</div>			</div>
+						</div>
+										</div>
+			</div>
+
+</div>
+	</footer><!-- #colophon -->
+
+    <!-- ================================================
+         OVERLAY DO MENU
+         ================================================ -->
+    <div id="rpm-backdrop" class="rpm-backdrop"></div>
+      <div id="rpm-menu-overlay" class="rpm-overlay" aria-hidden="true">
+        <nav class="rpm-overlay__nav">
+            <a href="{{ inicio }}#vinhos" class="rpm-overlay__link">
+                {{ t.menu_vinhos }}
+            </a>
+            <a href="{{ inicio }}#a-quinta" class="rpm-overlay__link">
+                {{ t.menu_historia }}
+            </a>
+            <a href="{{ inicio }}#contactos" class="rpm-overlay__link">
+                {{ t.menu_contactos }}
+            </a>
+        </nav>
+    </div>
+
+    <script src="{{ '/assets/js/rpm.js' | relative_url }}"></script>
+
+<div id="ast-scroll-top" tabindex="0" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both">
+	<span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewbox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve">
+                <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
+                </svg></span>	<span class="screen-reader-text">Scroll to Top</span>
+</div>
+<script>
+var astra = {"break_point":"921","isRtl":"","is_scroll_to_id":"1","is_scroll_to_top":"1","is_header_footer_builder_active":"1","responsive_cart_click":"flyout","is_dark_palette":""};
+</script>
+<script src="{{ '/wp-content/themes/astra/assets/js/minified/frontend.min.js' | relative_url }}"></script>
+</body>
+</html>

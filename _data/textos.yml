@@ -1,0 +1,46 @@
+# Textos fixos da interface, nas duas línguas.
+en:
+  html_lang: en-US
+  inicio: /
+  menu_vinhos: Wines
+  menu_historia: Our History
+  menu_contactos: Contacts
+  titulo_vinhos: Our Wines
+  mais_info: More info
+  voltar: "← Our Wines"
+  casta: Dominant Grape
+  ficha: Technical Data Sheet [.pdf]
+  nutricional: Nutritional information per 100 ml
+  energia: Energy
+  gorduras: Fats
+  gorduras_saturadas: of which saturated
+  carbohidratos: Carbohydrates
+  acucares: of which sugars
+  proteinas: Protein
+  sodio: Sodium
+  ingredientes: Ingredients
+  nao_encontrada: Page not found
+  ir_inicio: Go to the home page
+
+pt:
+  html_lang: pt-PT
+  inicio: /pt/inicio/
+  menu_vinhos: Vinhos
+  menu_historia: A Nossa História
+  menu_contactos: Contactos
+  titulo_vinhos: Os Nossos Vinhos
+  mais_info: Mais info
+  voltar: "← Os Nossos Vinhos"
+  casta: Casta Dominante
+  ficha: Ficha Técnica [.pdf]
+  nutricional: Informação nutricional por 100 ml
+  energia: Energia
+  gorduras: Gorduras
+  gorduras_saturadas: das quais saturadas
+  carbohidratos: Carbohidratos
+  acucares: dos quais açúcares
+  proteinas: Proteínas
+  sodio: Sódio
+  ingredientes: Ingredientes
+  nao_encontrada: Página não encontrada
+  ir_inicio: Ir para a página inicial

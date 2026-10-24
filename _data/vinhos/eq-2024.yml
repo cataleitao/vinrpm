@@ -1,0 +1,30 @@
+# EQ 2024
+# Páginas: /detail/eq-2024/ (EN) e /pt/detail/eq-2024-2/ (PT) — os QR codes das garrafas apontam para estes endereços. Não mudar.
+
+titulo: "EQ"
+ano: "2024"
+cor: "#DEA4E5"
+foto: "/wp-content/uploads/2026/07/Eq2024.jpeg"
+foto_alt: ""
+casta: "Arinto + Loureiro"
+ficha_tecnica: "/wp-content/uploads/2026/07/Ficha_Tecnica_Equaliser_2024.pdf"   # PDF; deixar "" se não houver
+
+# Informação nutricional por 100 ml (igual nas duas línguas)
+nutricional:
+  energia: "72"
+  gorduras: "0"
+  gorduras_saturadas: "0"
+  carbohidratos: "<0.5"
+  acucares: "<0.5"
+  proteinas: "0"
+  sodio: "-6"
+
+en:
+  tipo: "White"
+  descricao: "Minerality, minerality, minerality. The Arinto and Loureiro grapes macerate separately for three and five days and finish fermenting together in a concrete tank. The result is a delicate balance between lightness and complexity."
+  ingredientes: "Grapes, contains sulphites"
+
+pt:
+  tipo: "Branco"
+  descricao: "Mineralidade, mineralidade e mineralidade. As uvas maceram separadamente por três e cinco dias e acabam a fermentação em conjunto numa cuba de cimento. Fugindo ao óbvio, assenta o seu carácter na frescura e complexidade."
+  ingredientes: "Uvas, contém sulfitos"

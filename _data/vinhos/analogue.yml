@@ -1,0 +1,30 @@
+# Analogue 2023
+# Páginas: /detail/analogue/ (EN) e /pt/detail/analogue-2/ (PT) — os QR codes das garrafas apontam para estes endereços. Não mudar.
+
+titulo: "Analogue"
+ano: "2023"
+cor: "#f0a898"
+foto: "/wp-content/uploads/2026/06/rpm-analog.jpg"
+foto_alt: "Analog vinho Natural RPM"
+casta: "Arinto + Avesso + Fernão Pires"
+ficha_tecnica: ""   # PDF; deixar "" se não houver
+
+# Informação nutricional por 100 ml (igual nas duas línguas)
+nutricional:
+  energia: "72"
+  gorduras: "0"
+  gorduras_saturadas: "0"
+  carbohidratos: "<0.5"
+  acucares: "<0.5"
+  proteinas: "0"
+  sodio: "0"
+
+en:
+  tipo: "White"
+  descricao: "ANALOGUE captures the essence of the three predominant grape varieties on the estate: Arinto, Avesso, and Fernão Pires. Together, they produce a balanced, fresh wine with slight floral notes. The grapes were foot-tread on granite lagares and finished fermenting separately in the Quinta’s old concrete tanks."
+  ingredientes: "Grapes, contains sulphites"
+
+pt:
+  tipo: "Branco"
+  descricao: "ANALOGUE capta a essência das três castas predominantes na quinta: Arinto, Avesso e Fernão Pires. Juntas, produzem um vinho equilibrado e fresco, com ligeiras notas florais. As uvas foram pisadas a pé em lagares de granito e terminaram a fermentação separadamente nos antigos tanques de cimento da quinta."
+  ingredientes: "Uvas, contém sulfitos"

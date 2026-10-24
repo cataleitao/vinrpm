@@ -1,0 +1,30 @@
+# Overdub 2024
+# Páginas: /detail/ovdb-tinto-2024/ (EN) e /pt/detail/ovdb-tinto-2024-2/ (PT) — os QR codes das garrafas apontam para estes endereços. Não mudar.
+
+titulo: "Overdub"
+ano: "2024"
+cor: "#e8507a"
+foto: "/wp-content/uploads/2026/07/ovdb-t-2024.jpeg"
+foto_alt: ""
+casta: "Castelão"
+ficha_tecnica: "/wp-content/uploads/2026/07/Ficha_Tecnica_Overdub_Tinto_2024.pdf"   # PDF; deixar "" se não houver
+
+# Informação nutricional por 100 ml (igual nas duas línguas)
+nutricional:
+  energia: "75"
+  gorduras: "0"
+  gorduras_saturadas: "0"
+  carbohidratos: "<0.5"
+  acucares: "<0.5"
+  proteinas: "0"
+  sodio: "0"
+
+en:
+  tipo: "Red - Old Vines"
+  descricao: "The recipe was on the trellis and in the hanging vines like music on a score written over eighty years ago. We picked the fruit and let the yeasts work, first macerating for eight days in the granite lagares and then in the Quinta’s old concrete tanks. The predominant grape variety is Castelão. *Mic Drop*"
+  ingredientes: "Grapes, contains sulphites"
+
+pt:
+  tipo: "Red - Old Vines"
+  descricao: "The recipe was on the trellis and in the hanging vines like music on a score written over eighty years ago. We picked the fruit and let the yeasts work, first macerating for eight days in the granite lagares and then in the Quinta’s old concrete tanks. The predominant grape variety is Castelão. *Mic Drop*"
+  ingredientes: "Grapes, contains sulphites"

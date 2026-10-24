@@ -1,0 +1,30 @@
+# Looper 2023
+# Páginas: /detail/looper/ (EN) e /pt/detail/looper-2/ (PT) — os QR codes das garrafas apontam para estes endereços. Não mudar.
+
+titulo: "Looper"
+ano: "2023"
+cor: "#c8d4e8"
+foto: "/wp-content/uploads/2026/06/looper-23.jpg"
+foto_alt: ""
+casta: "Arinto + Fernão Pires"
+ficha_tecnica: ""   # PDF; deixar "" se não houver
+
+# Informação nutricional por 100 ml (igual nas duas línguas)
+nutricional:
+  energia: "72"
+  gorduras: "0"
+  gorduras_saturadas: "0"
+  carbohidratos: "<0.5"
+  acucares: "<0.5"
+  proteinas: "0"
+  sodio: "0"
+
+en:
+  tipo: "White - Pet Nat"
+  descricao: "Off the beaten path, for our first approach to sparkling wines, we decided to create a wine that pays homage to the local tradition of allowing the malolactic conversion in the bottle. A blend of Arinto and Fernão Pires, the grapes were macerated separately for three days in our granite lagares and finished fermenting in stainless steel tanks."
+  ingredientes: "Grapes, contains sulphites"
+
+pt:
+  tipo: "Branco - Pet Nat"
+  descricao: "Decidimos que numa primeira etapa ficávamos de fora do ritmo e voltamos atrás apresentando um vinho que homenageia a tradição dos vinhos da região efetuarem a malolática dentro da garrafa. Um blend de Arinto e Fernão Pires, as uvas foram maceradas separadamente durante três dias nos nossos lagares de granito e terminaram a fermentação em cubas de inox."
+  ingredientes: "Uvas, contém sulfitos"

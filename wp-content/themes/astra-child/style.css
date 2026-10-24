@@ -1,0 +1,1284 @@
+/*
+Theme Name: Astra Child
+Template: astra
+*/
+
+/* =====================
+   FONTS
+   ===================== */
+
+@font-face {
+    font-family: 'Hatch';
+    src: url('fonts/hatch-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hatch';
+    src: url('fonts/hatch-300-italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sober';
+    src: url('fonts/sober-thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sober';
+    src: url('fonts/sober-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sober';
+    src: url('fonts/sober-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sober';
+    src: url('fonts/sober-extrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sober';
+    src: url('fonts/sober-black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Serif Display';
+    src: local('DM Serif Display');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =====================
+   BASE
+   ===================== */
+
+body, p {
+    font-family: 'Hatch', serif !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
+}
+
+body {
+    background-color: #fffff4 !important;
+}
+
+/* Scroll suave global */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Compensar a altura do header fixo nas âncoras */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+.site-title,
+.site-title a {
+    font-family: 'Sober', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+#masthead {
+    background-color: rgba(255, 255, 244, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+#masthead .ast-above-header-bar,
+#masthead .ast-primary-header-bar {
+    background-color: transparent !important;
+}
+
+/* Esconde o menu nativo do Astra — desktop e mobile */
+#masthead #site-navigation,
+#masthead .main-header-menu,
+#masthead .ast-header-navigation,
+#masthead .ast-primary-header-bar .ast-main-header-wrap > nav,
+#masthead .ast-builder-menu,
+#masthead #ast-desktop-btn-group,
+#masthead .ast-mobile-menu-trigger,
+#masthead [data-section="section-header-mobile-trigger"],
+#masthead .ast-mobile-menu-trigger-minimal,
+#masthead .mobile-menu-wrap,
+#masthead .ast-mobile-svg,
+[data-section="section-header-mobile-trigger"],
+.ast-mobile-popup-drawer,
+.ast-header-break-point .main-header-bar .ast-mobile-menu-trigger,
+#ast-mobile-header {
+    display: none !important;
+}
+
+/* =====================
+   HEADER PRÓPRIO (header.php)
+   ===================== */
+
+.rpm-header {
+    background-color: rgba(255, 255, 244, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.15) !important;
+    width: 100% !important;
+}
+
+header#masthead.rpm-header .rpm-header__inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 80px !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+}
+header#masthead.rpm-header {
+    z-index: 3000 !important;
+}
+
+.rpm-header__logo .site-title,
+.rpm-header__logo a {
+    font-family: 'Sober', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    display: block !important;
+}
+
+.rpm-header__logo a:hover {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+.rpm-header__right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 28px !important;
+}
+
+
+/* Esconde o header do Astra — substituído pelo nosso */
+#masthead:not(.rpm-header) {
+    display: none !important;
+}
+
+/* Esconde rpm-custom-header — já não necessário */
+#rpm-custom-header {
+    display: none !important;
+}
+
+/* Botão MENU */
+#rpm-btn-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Hatch', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #000000;
+    letter-spacing: 0.08em;
+    padding: 0;
+    line-height: 1;
+}
+
+#rpm-btn-menu:hover {
+    opacity: 0.5;
+}
+
+/* Selector de língua */
+#rpm-lang-wrapper {
+    position: relative;
+}
+
+#rpm-lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Hatch', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+#rpm-lang-btn:hover {
+    opacity: 0.5;
+}
+
+.rpm-lang-arrow {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+#rpm-lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background-color: rgba(255, 255, 244, 0.97);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 0;
+    min-width: 48px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+#rpm-lang-dropdown.is-open {
+    display: block;
+}
+
+.rpm-lang-item {
+    display: block;
+    padding: 6px 14px;
+    font-family: 'Hatch', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #000000 !important;
+    text-decoration: none !important;
+    line-height: 1.4;
+}
+
+.rpm-lang-item:hover {
+    opacity: 0.5;
+}
+
+.rpm-lang-item.is-current {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* =====================
+   OVERLAY DO MENU
+   ===================== */
+
+/* Blur no conteúdo quando o menu está aberto */
+body.rpm-menu-open #page {
+    filter: blur(4px);
+    transition: filter 0.4s ease;
+}
+
+body:not(.rpm-menu-open) #page {
+    filter: blur(0);
+    transition: filter 0.4s ease;
+}
+
+.rpm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 80px 0 40px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    --ast-global-color-0: #000000;
+    --ast-global-color-1: #000000;
+    --ast-global-color-2: #000000;
+    --ast-global-color-3: #000000;
+    transform: translateY(-100%);
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+}
+.rpm-overlay.is-open {
+    transform: translateY(0);
+    pointer-events: all;
+}
+.rpm-overlay__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    cursor: default;
+    width: 100%;
+    padding-right: 0px;
+    box-sizing: border-box;
+}
+
+/* Backdrop para fechar ao clicar fora */
+.rpm-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1999;
+    cursor: pointer;
+}
+.rpm-backdrop.is-open {
+    display: block;
+}
+
+.rpm-overlay__link {
+    font-family: 'Sober', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: #000000 !important;
+    text-decoration: none !important;
+    line-height: 1.15;
+    transition: opacity 0.15s;
+    cursor: pointer;
+    text-align: right;
+    border-top: 1px solid rgba(0,0,0,0.15);
+    padding-top: 8px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.rpm-overlay__link:hover,
+#rpm-menu-overlay a:hover,
+#rpm-menu-overlay a:focus {
+    color: #000000 !important;
+    opacity: 0.35;
+    text-decoration: none !important;
+}
+
+/* =====================
+   TITLES
+   ===================== */
+
+h1, h2, h3, h4, h5, h6,
+.wp-block-heading {
+    font-family: 'Sober', sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    color: #000000 !important;
+    text-align: left !important;
+    font-size: 3rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* =====================
+   BUTTONS
+   ===================== */
+
+.wp-block-button__link,
+.wp-element-button {
+    background-color: transparent !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 20px !important;
+    font-family: 'Hatch', serif !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 8px 20px !important;
+    text-decoration: none !important;
+}
+
+.wp-block-button__link:hover,
+.wp-element-button:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* =====================
+   PÁGINA ÚNICA — WRAPPER
+   ===================== */
+
+.page-template-page-inicio .entry-title {
+    display: none !important;
+}
+
+/* Neutraliza o layout do Astra na home */
+.page-template-page-inicio .site-content,
+.page-template-page-inicio .ast-container,
+.page-template-page-inicio article,
+.page-template-page-inicio .entry-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Wrapper principal: pilha vertical */
+.rpm-home-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+/* Secção base */
+.rpm-section {
+    width: 100%;
+}
+
+/* --- INTRO --- */
+.rpm-section--intro {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.rpm-section--intro p {
+    font-size: 2rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1.4em !important;
+}
+
+.rpm-section--intro p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Esconde títulos H1/H2 que o Gutenberg possa injectar na intro */
+.rpm-section--intro h1,
+.rpm-section--intro h2 {
+    display: none !important;
+}
+
+/* --- VINHOS --- */
+.rpm-section--vinhos {
+    padding: 80px 0;
+}
+
+.rpm-section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.rpm-section-title {
+    font-family: 'Sober', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+    margin-bottom: 48px !important;
+}
+
+.rpm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.rpm-card {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.rpm-card__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rpm-card__body {
+    padding: 20px;
+}
+
+.rpm-card__meta {
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.4 !important;
+    color: #000000 !important;
+}
+
+.rpm-card__title {
+    font-family: 'Sober', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.8rem !important;
+    margin: 0 0 12px 0 !important;
+    color: #000000 !important;
+}
+
+.rpm-card__btn {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Hatch', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.rpm-card__btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- A QUINTA (embutida na home) — layout empilhado --- */
+.rpm-section--quinta {
+    width: 100%;
+    background-color: #faf0ec !important;
+    padding: 100px 0 !important;
+}
+
+.rpm-section--quinta .ast-container,
+.rpm-section--quinta .entry-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Texto: mesmo contentor de 1200px que a seccao dos vinhos e a intro */
+.rpm-section--quinta h1,
+.rpm-section--quinta h2,
+.rpm-section--quinta p {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.rpm-section--quinta h1,
+.rpm-section--quinta h2 {
+    margin-bottom: 32px !important;
+}
+
+.rpm-section--quinta p {
+    font-size: 1.4rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.4em !important;
+}
+
+/* Imagens: mesmas margens que o texto (contentor 1200px), empilhadas */
+.rpm-section--quinta figure {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 40px auto 0 !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+}
+
+.rpm-section--quinta figure img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 12px !important;
+}
+
+@media (max-width: 600px) {
+    .rpm-section--quinta {
+        padding: 60px 0 !important;
+    }
+    .rpm-section--quinta h1,
+    .rpm-section--quinta h2,
+    .rpm-section--quinta p,
+    .rpm-section--quinta figure {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+    .rpm-section--quinta p {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* --- CONTACTOS (embutidos na home) --- */
+.rpm-section--contactos {
+    background-color: #fffff4;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rpm-section--contactos a,
+.rpm-section--contactos p {
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.rpm-section--contactos .wp-block-columns {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 80px 40px !important;
+}
+
+/* --- CONTACTOS: bloco Media & Text (home + pagina autonoma) --- */
+.rpm-section--contactos .wp-block-media-text,
+.page-id-22 .wp-block-media-text,
+.page-id-157 .wp-block-media-text {
+    width: 100% !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+    padding: 80px 40px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+}
+
+/* Desktop: logo + texto juntos e centrados, texto numa linha por endereco */
+@media (min-width: 601px) {
+    .rpm-section--contactos .wp-block-media-text,
+    .page-id-22 .wp-block-media-text,
+    .page-id-157 .wp-block-media-text {
+        grid-template-columns: auto auto !important;
+        justify-content: center !important;
+        column-gap: 64px !important;
+    }
+    .rpm-section--contactos .wp-block-media-text__media img,
+    .page-id-22 .wp-block-media-text__media img,
+    .page-id-157 .wp-block-media-text__media img {
+        width: auto !important;
+        max-width: 300px !important;
+        height: auto !important;
+    }
+    .rpm-section--contactos .wp-block-media-text__content p,
+    .page-id-22 .wp-block-media-text__content p,
+    .page-id-157 .wp-block-media-text__content p {
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+}
+
+/* Mobile: empilha, centrado, com espaco entre logo e moradas */
+@media (max-width: 600px) {
+    .rpm-section--contactos .wp-block-media-text,
+    .page-id-22 .wp-block-media-text,
+    .page-id-157 .wp-block-media-text {
+        padding: 60px 24px !important;
+        text-align: center !important;
+    }
+    .rpm-section--contactos .wp-block-media-text__media,
+    .page-id-22 .wp-block-media-text__media,
+    .page-id-157 .wp-block-media-text__media {
+        margin-bottom: 40px !important;
+    }
+}
+
+/* =====================
+   PÁGINA DETAIL — TEXTO PRETO
+   ===================== */
+
+.single-detail p,
+.single-detail h1,
+.single-detail h2,
+.single-detail h3,
+.single-detail td,
+.single-detail span,
+.single-detail button {
+    color: #000000 !important;
+}
+
+.single-detail table {
+    border-top: 1px solid #000000 !important;
+    border-right: 1px solid #000000 !important;
+    border-left: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.single-detail table tr {
+    border-bottom: 1px solid #000000 !important;
+}
+
+.single-detail table td {
+    padding: 12px 4px !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-color: #000000 !important;
+}
+
+.single-detail table td:first-child {
+    border-right: 1px solid #000000 !important;
+}
+
+.single-detail table tr:first-child td {
+    border-top: 1px solid #000000 !important;
+}
+
+/* =====================
+   CORES DOS CARTÕES DOS VINHOS
+   ===================== */
+
+.vinho-analogue        { background-color: #f0a898; }
+.vinho-eq              { background-color: #e8dfc0; }
+.vinho-looper          { background-color: #c8d4e8; }
+.vinho-reverb          { background-color: #c8d8c0; }
+.vinho-overdub-tinto   { background-color: #e8507a; }
+.vinho-overdub-branco  { background-color: #c8d8c0; }
+
+/* =====================
+   PÁGINA A QUINTA (standalone) — mesmo layout empilhado
+   (nao usada no menu; mantida para compatibilidade)
+   ===================== */
+.page-template-page-a-quinta main {
+    background-color: #faf0ec !important;
+    padding: 100px 0 !important;
+}
+
+.page-template-page-a-quinta main h1,
+.page-template-page-a-quinta main h2,
+.page-template-page-a-quinta main p {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.page-template-page-a-quinta main p {
+    font-size: 1.4rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1.4em !important;
+}
+
+.page-template-page-a-quinta main figure {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 40px auto 0 !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+}
+
+.page-template-page-a-quinta main figure img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 12px !important;
+}
+
+/* =====================
+   PÁGINA CONTACTOS (standalone)
+   ===================== */
+
+.page-id-22 .entry-title,
+.page-id-157 .entry-title {
+    display: none !important;
+}
+
+.page-id-22 a,
+.page-id-22 p,
+.page-id-157 a,
+.page-id-157 p {
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.page-id-22 .entry-content,
+.page-id-157 .entry-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 70vh !important;
+}
+
+.page-id-22 .wp-block-columns,
+.page-id-157 .wp-block-columns {
+    width: 100% !important;
+}
+
+/* =====================
+   LINKS HOVER — SEM AZUL
+   ===================== */
+
+a:hover,
+a:focus {
+    color: #6a9a8a !important;
+    text-decoration: none !important;
+}
+
+/* RPM no header — nunca muda de cor */
+.site-title a:hover,
+.site-title a:focus {
+    color: #000000 !important;
+}
+
+/* Botões — mantêm o seu próprio hover */
+.rpm-card__btn:hover,
+.wp-block-button__link:hover,
+.wp-element-button:hover {
+    color: #ffffff !important;
+}
+
+/* Overlay e header — mantêm preto */
+#rpm-menu-overlay .rpm-overlay__link:hover,
+#rpm-menu-overlay .rpm-overlay__link:focus {
+    opacity: 0.35;
+    color: #000000 !important;
+}
+
+#rpm-btn-menu:hover,
+#rpm-lang-btn:hover,
+.rpm-lang-item:hover {
+    color: #000000 !important;
+    opacity: 0.5;
+}
+
+/* =====================
+   SETA SCROLL TO TOP
+   ===================== */
+
+#ast-scroll-top {
+    background-color: transparent !important;
+    border: 1px solid #000000 !important;
+    border-radius: 20px !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 6px 14px !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+    line-height: 1 !important;
+}
+
+#ast-scroll-top svg,
+#ast-scroll-top svg path {
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+#ast-scroll-top:hover {
+    background-color: #000000 !important;
+}
+
+#ast-scroll-top:hover svg,
+#ast-scroll-top:hover svg path {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* =====================
+   RESPONSIVE — TABLET (max 1024px)
+   ===================== */
+
+@media (max-width: 1024px) {
+    .rpm-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .rpm-section--intro {
+        padding: 60px 40px !important;
+    }
+
+    .rpm-section--intro p {
+        font-size: 1.6rem !important;
+    }
+
+    .rpm-overlay__link {
+        font-size: 3.5rem !important;
+    }
+
+    /* Detail — coluna única no tablet */
+    .rpm-detail-card {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: unset !important;
+    }
+
+    .rpm-detail-card__foto {
+        width: 100% !important;
+        min-height: 400px !important;
+        height: 50vw !important;
+        flex-shrink: 0 !important;
+    }
+
+    .rpm-detail-card__img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .rpm-detail-card__info {
+        padding: 40px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* =====================
+   RESPONSIVE — MOBILE (max 600px)
+   ===================== */
+
+@media (max-width: 600px) {
+
+    /* Header */
+    #rpm-custom-header {
+        height: 64px !important;
+    }
+
+    section[id] {
+        scroll-margin-top: 64px !important;
+    }
+
+    /* Intro */
+    .rpm-section--intro {
+        padding: 48px 24px !important;
+    }
+
+    .rpm-section--intro p {
+        font-size: 1.3rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Grelha — 1 coluna */
+    .rpm-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .rpm-section-inner {
+        padding: 0 24px !important;
+    }
+
+    .rpm-section--vinhos {
+        padding: 48px 0 !important;
+    }
+
+    .rpm-section-title {
+        font-size: 2.2rem !important;
+    }
+
+    /* Overlay do menu */
+    .rpm-overlay {
+        padding: 80px 24px 0 24px !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+
+    .rpm-overlay__nav {
+        align-items: flex-start !important;
+    }
+
+    .rpm-overlay__link {
+        font-size: 2.8rem !important;
+        text-align: left !important;
+    }
+
+    /* Seta scroll-to-top */
+    #ast-scroll-top {
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+
+    /* Página detail — coluna única */
+    .single-detail main > div[style*="grid"] {
+        display: block !important;
+    }
+
+    .single-detail main > div > div:first-child {
+        min-height: 280px !important;
+        height: 70vw !important;
+    }
+
+    .single-detail main > div > div:last-child {
+        padding: 24px !important;
+    }
+
+    .single-detail h1 {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* =====================
+   SINGLE DETAIL — LAYOUT
+   ===================== */
+
+.rpm-detail-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+/* Forçar fundo transparente no botão — sobrepor Astra */
+.rpm-detail-nutri__btn,
+.rpm-detail-nutri__btn:hover,
+.rpm-detail-nutri__btn:focus {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    font-family: 'Hatch', serif !important;
+    font-size: 1rem !important;
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0 !important;
+    width: 100%;
+    text-align: left;
+    color: #000000 !important;
+}
+
+.rpm-detail-back {
+    margin-bottom: 32px;
+}
+
+.rpm-detail-back__link {
+    font-family: 'Hatch', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+
+.rpm-detail-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: start;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.rpm-detail-card__foto {
+    height: 100%;
+    min-height: 500px;
+}
+
+.rpm-detail-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.rpm-detail-card__info {
+    padding: 40px;
+}
+
+.rpm-detail-card__titulo {
+    font-family: 'Sober', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+    margin: 0 0 8px 0 !important;
+    color: #000000 !important;
+}
+
+.rpm-detail-card__subtitulo {
+    font-size: 1rem !important;
+    margin: 0 0 24px 0 !important;
+    color: #000000 !important;
+}
+
+.rpm-detail-card__casta {
+    margin-bottom: 8px !important;
+    color: #000000 !important;
+}
+
+.rpm-detail-card__descricao {
+    margin: 24px 0 40px 0 !important;
+    line-height: 1.6 !important;
+    color: #000000 !important;
+}
+
+.rpm-detail-nutri {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+
+.rpm-detail-nutri__btn .rpm-toggle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #000000 !important;
+}
+
+.rpm-detail-nutri__tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Hatch', serif;
+}
+
+.rpm-detail-nutri__tabela tr {
+    border-bottom: 1px solid #000 !important;
+}
+
+.rpm-detail-nutri__tabela td {
+    padding: 12px 4px !important;
+    color: #000000 !important;
+}
+
+.rpm-detail-nutri__tabela td:last-child {
+    text-align: right;
+}
+
+.rpm-detail-nutri__tabela .rpm-sub {
+    padding-left: 20px !important;
+}
+
+.rpm-detail-nutri__ingredientes {
+    margin-top: 20px !important;
+    color: #000000 !important;
+}
+
+/* =====================
+   SINGLE DETAIL — MOBILE
+   ===================== */
+
+@media (max-width: 600px) {
+    .rpm-detail-main {
+        padding: 24px 16px 40px;
+    }
+
+    .rpm-detail-card {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: unset !important;
+    }
+
+    .rpm-detail-card__foto {
+        width: 100% !important;
+        min-height: 280px !important;
+        height: 70vw !important;
+        flex-shrink: 0 !important;
+    }
+
+    .rpm-detail-card__img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .rpm-detail-card__info {
+        padding: 24px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .rpm-detail-card__titulo {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* =====================
+   A QUINTA — TABLET E MOBILE
+   ===================== */
+
+@media (max-width: 1024px) {
+    .rpm-section--quinta .wp-block-columns {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        min-height: auto !important;
+    }
+
+    .rpm-section--quinta .wp-block-column {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 40px 24px !important;
+    }
+
+    .rpm-section--quinta .wp-block-column:has(figure) {
+        padding: 0 !important;
+        height: 60vw !important;
+        min-height: 240px !important;
+        max-height: none !important;
+    }
+
+    .rpm-section--quinta .wp-block-column:has(figure) figure,
+    .rpm-section--quinta .wp-block-column:has(figure) img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .rpm-section--quinta h1,
+    .rpm-section--quinta h2 {
+        font-size: 2rem !important;
+        word-break: normal !important;
+        hyphens: none !important;
+        white-space: normal !important;
+    }
+}
+
+/* =====================
+   A QUINTA — XADREZ NO DESKTOP
+   Gutenberg: ambos imagem|texto
+   CSS inverte o 2º bloco no desktop
+   ===================== */
+
+@media (min-width: 1025px) {
+    .rpm-section--quinta .wp-block-columns:nth-of-type(2) .wp-block-column:first-child {
+        order: 2;
+    }
+    .rpm-section--quinta .wp-block-columns:nth-of-type(2) .wp-block-column:last-child {
+        order: 1;
+    }
+}
+
+/* =====================
+  ficha tecnica
+   ===================== */
+.rpm-detail-ficha {
+    margin: 0 0 1.2rem 0;
+}
+.rpm-detail-card .rpm-detail-ficha a {
+    font-family: 'Hatch', serif !important;
+    font-size: 1rem !important;
+    color: #000 !important;
+    text-decoration: none;
+}
+.single-detail .rpm-detail-card .rpm-detail-ficha a:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}

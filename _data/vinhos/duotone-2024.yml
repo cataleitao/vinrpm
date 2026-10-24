@@ -1,0 +1,30 @@
+# Duotone 2024
+# Páginas: /detail/duotone-2024/ (EN) e /pt/detail/duotone-2024-2/ (PT) — os QR codes das garrafas apontam para estes endereços. Não mudar.
+
+titulo: "Duotone"
+ano: "2024"
+cor: "#B8E736"
+foto: "/wp-content/uploads/2026/07/duotone2024.jpeg"
+foto_alt: ""
+casta: ""
+ficha_tecnica: "/wp-content/uploads/2026/07/Ficha_Tecnica_Duotone_2024.pdf"   # PDF; deixar "" se não houver
+
+# Informação nutricional por 100 ml (igual nas duas línguas)
+nutricional:
+  energia: ""
+  gorduras: "0"
+  gorduras_saturadas: "0"
+  carbohidratos: "<0.5"
+  acucares: "<0.5"
+  proteinas: "0"
+  sodio: "0"
+
+en:
+  tipo: "Palhete"
+  descricao: ""
+  ingredientes: "Grapes, contains sulphites"
+
+pt:
+  tipo: "Palhete"
+  descricao: ""
+  ingredientes: "Uvas, contém sulfitos"
