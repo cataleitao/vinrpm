@@ -71,8 +71,10 @@ Quando um vinho esgota, basta tirá-lo de `_data/grelha.yml`. A página continua
 
 ## Domínio
 
-Durante os testes o site está em https://cataleitao.github.io/vinrpm/ e `_config.yml` tem `baseurl: "/vinrpm"`.
-No dia da mudança: `baseurl: ""`, ficheiro `CNAME` com `vinrpm.com`, e DNS apontado para o GitHub Pages.
+Desde 12/11/2026 o site está em https://vinrpm.com (ficheiro `CNAME`, `baseurl: ""` em `_config.yml`).
+O DNS continua na zona do cPanel da dominios.pt. Só os registos do site apontam para o GitHub
+(A `vinrpm.com` → 185.199.108.153 / 109 / 110 / 111; CNAME `www` → cataleitao.github.io).
+Os registos do email (Proton) estão na mesma zona: **não cancelar o alojamento** sem antes mudar o DNS de sítio.
 
 ## Endereços antigos do WordPress
 
