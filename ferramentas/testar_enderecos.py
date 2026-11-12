@@ -2,9 +2,9 @@
 # Uso: python3 ferramentas/testar_enderecos.py https://vinrpm.com
 import urllib.request, urllib.error, sys, re
 BASE=sys.argv[1]
-qr=['/detail/analogue_2024/','/detail/duotone-2024/','/detail/eq-2024/','/detail/ovdb-tinto-2024/','/detail/ovdb-branco-2025/',
+qr=['/detail/analogue_2024/','/detail/duotone-2024/','/detail/eq-2024/','/detail/ovdb-tinto-2024/','/detail/ovdb-branco-2025/','/detail/ovdb-branco-2024/',
     '/pt/detail/reverb-2/','/detail/analogue/','/detail/looper/','/detail/eq/','/detail/ovdb-branco/']
-outras=['/','/pt/inicio/','/detail/reverb/','/detail/ovdb-tinto/','/pt/detail/analogue-2/','/pt/detail/eq-2/','/pt/detail/looper-2/','/pt/detail/ovdb-tinto-2/','/pt/detail/ovdb-branco-2/','/pt/detail/analogue_2024-2/','/pt/detail/eq-2024-2/','/pt/detail/ovdb-tinto-2024-2/','/pt/detail/ovdb-branco-2025-2/','/pt/detail/duotone-2024-2/',
+outras=['/','/pt/inicio/','/detail/reverb/','/detail/ovdb-tinto/','/pt/detail/analogue-2/','/pt/detail/eq-2/','/pt/detail/looper-2/','/pt/detail/ovdb-tinto-2/','/pt/detail/ovdb-branco-2/','/pt/detail/analogue_2024-2/','/pt/detail/eq-2024-2/','/pt/detail/ovdb-tinto-2024-2/','/pt/detail/ovdb-branco-2025-2/','/pt/detail/ovdb-branco-2024-2/','/wp-content/uploads/2026/11/Ficha_Tecnica_Overdub_2024.pdf','/pt/detail/duotone-2024-2/',
     '/the-quinta/','/pt/a-quinta/','/wines/','/pt/vinhos/','/contacts/','/pt/contactos/','/pt/','/detail/','/pt/detail/','/hello-world/','/detail/reverb-2/',
     '/wp-content/uploads/2026/07/Ficha_Tecnica_Analogue_2024.pdf','/wp-content/uploads/2026/07/Ficha_Tecnica_Duotone_2024.pdf','/wp-content/uploads/2026/07/Ficha_Tecnica_Equaliser_2024.pdf','/wp-content/uploads/2026/07/Ficha_Tecnica_Overdub_2025.pdf','/wp-content/uploads/2026/07/Ficha_Tecnica_Overdub_Tinto_2024.pdf']
 sem_barra=[u.rstrip('/') for u in qr]
