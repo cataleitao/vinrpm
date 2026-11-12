@@ -4,14 +4,14 @@
 titulo: "Overdub"
 ano: "2024"
 cor: "#C09A5D"
-foto: ""   # FALTA A FOTO
+foto: "/wp-content/uploads/2026/11/ovdb-b-2024.jpeg"
 foto_alt: ""
 casta: "Pedernã"
 ficha_tecnica: "/wp-content/uploads/2026/11/Ficha_Tecnica_Overdub_2024.pdf"   # PDF; deixar "" se não houver
 
 # Informação nutricional por 100 ml (igual nas duas línguas)
 nutricional:
-  energia: "71"
+  energia: "68"
   gorduras: "0"
   gorduras_saturadas: "0"
   carbohidratos: "<0.5"
