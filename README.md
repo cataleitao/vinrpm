@@ -15,6 +15,7 @@ Os endereços das páginas dos vinhos. As garrafas têm QR codes que apontam par
 | EQ 2024 | `/detail/eq-2024/` | `/pt/detail/eq-2024-2/` |
 | Overdub Tinto 2024 | `/detail/ovdb-tinto-2024/` | `/pt/detail/ovdb-tinto-2024-2/` |
 | Overdub Branco 2025 | `/detail/ovdb-branco-2025/` | `/pt/detail/ovdb-branco-2025-2/` |
+| Overdub Branco 2024 | `/detail/ovdb-branco-2024/` | `/pt/detail/ovdb-branco-2024-2/` |
 | Analogue 2023 (esgotado) | `/detail/analogue/` | `/pt/detail/analogue-2/` |
 | EQ 2023 (esgotado) | `/detail/eq/` | `/pt/detail/eq-2/` |
 | Looper 2023 (esgotado) | `/detail/looper/` | `/pt/detail/looper-2/` |
